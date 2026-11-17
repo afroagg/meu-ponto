@@ -16,7 +16,7 @@ João Dyonisio
 - script.js: chamadas à API, cálculo dos minutos até a chegada, ordenação e filtro de ônibus acessíveis
 - script.js: busca de pontos e atualização automática a cada 30 segundos
 
-Arthur
+Arthur Berthi
 - script.js: mapa com Leaflet e funções que desenham as listas
 - Testes de uso no celular
 - README.md e este arquivo
