@@ -1,0 +1,19 @@
+Global Solution 2026.2 - Application Development (Prof. Rodrigo Moraes)
+Projeto: Meu ponto - próximos ônibus em São Paulo (API Olho Vivo / SPTrans)
+Turma: 2CCPR
+
+Integrantes e o que cada um fez
+
+Agatha Carolina dos Santos Rodrigues - RM 568352
+- Função serverless do Vercel (api/olhovivo.js): login na SPTrans, cookie de sessão e proteção do token
+- Publicação no Vercel e configuração da variável SPTRANS_TOKEN
+- Interface: index.html e style.css (layout para celular e computador)
+
+João Dyonisio Dias Cruz de Medeiros Rocha - RM 567087
+- script.js: chamadas à API, cálculo dos minutos até a chegada, ordenação e filtro de ônibus acessíveis
+- script.js: busca de pontos e atualização automática a cada 30 segundos
+
+Arthur Casqueira Berthi - RM 568017
+- script.js: mapa com Leaflet e funções que desenham as listas
+- Testes de uso no celular
+- README.md e este arquivo

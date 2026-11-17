@@ -1,0 +1,8 @@
+{
+  "name": "meu-ponto",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Painel de próximos ônibus de um ponto de São Paulo, com a API Olho Vivo (SPTrans)",
+  "engines": { "node": ">=18" }
+}

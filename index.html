@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meu ponto - próximos ônibus em São Paulo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Meu ponto</h1>
+    <form class="busca">
+      <input class="campo-busca" type="search" placeholder="Buscar ponto de ônibus (ex.: Paulista)" aria-label="Nome ou endereço do ponto">
+      <button type="submit">Buscar</button>
+    </form>
+  </header>
+
+  <main class="conteudo">
+    <div id="mapa"></div>
+
+    <section class="lista">
+      <p class="mensagem">Busque o seu ponto para ver quando cada ônibus chega.</p>
+      <ul class="lista-pontos"></ul>
+
+      <h2 class="titulo-ponto"></h2>
+      <label class="filtro" hidden>
+        <input class="filtro-acessiveis" type="checkbox">
+        Só ônibus acessíveis ♿
+      </label>
+      <ul class="lista-linhas"></ul>
+
+      <footer class="creditos">
+        <p>Dados: <a href="https://www.sptrans.com.br/desenvolvedores/" target="_blank">SPTrans / API Olho Vivo</a>. Mapa: © OpenStreetMap.</p>
+        <p>Projeto acadêmico FIAP, Global Solution 2026.2.</p>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
