@@ -46,6 +46,14 @@ INTEGRANTES.txt   integrantes e divisão do trabalho
 3. Antes de clicar em Deploy, abra Environment Variables e crie `SPTRANS_TOKEN` com o seu token.
 4. Clique em Deploy. A URL do app aparece quando terminar.
 
+## Integrantes
+
+Projeto desenvolvido pelo trio da turma 2CCPR:
+
+- Agatha Carolina dos Santos Rodrigues - RM 568352
+- Arthur Casqueira Berthi - RM 568017
+- João Dyonisio Dias Cruz de Medeiros Rocha - RM 567087
+
 ## Créditos
 
 Dados da SPTrans, API Olho Vivo. Mapa com Leaflet, © OpenStreetMap. As previsões dependem do trânsito e podem variar.
