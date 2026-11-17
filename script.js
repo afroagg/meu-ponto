@@ -6,6 +6,7 @@ const tituloPonto = document.querySelector(".titulo-ponto");
 const filtro = document.querySelector(".filtro");
 const filtroAcessiveis = document.querySelector(".filtro-acessiveis");
 const listaLinhas = document.querySelector(".lista-linhas");
+const resumo = document.querySelector(".resumo");
 
 let pontos = [];
 let pontoAtual = null;
@@ -75,7 +76,17 @@ function mostrarLinhas() {
     linha.vs.sort((a, b) => minutosAte(previsao.hr, a.t) - minutosAte(previsao.hr, b.t));
   });
   linhas.sort((a, b) => minutosAte(previsao.hr, a.vs[0].t) - minutosAte(previsao.hr, b.vs[0].t));
-
+  
+  let total = 0;
+  let acessiveis = 0;
+  linhas.forEach((linha) => {
+    linha.vs.forEach((v) => {
+      total++;
+      if (v.a === true) acessiveis++;
+    });
+  });
+  resumo.textContent = acessiveis + " de " + total + " ônibus acessíveis";
+  
   linhas.forEach((linha) => {
     let onibus = linha.vs;
     if (filtroAcessiveis.checked) {
@@ -151,6 +162,7 @@ formBusca.addEventListener("submit", async (evento) => {
   pontoAtual = null;
   tituloPonto.textContent = "";
   listaLinhas.innerHTML = "";
+  resumo.textContent = "";
   filtro.hidden = true;
   camadaMapa.clearLayers();
   mensagem.textContent = "Buscando pontos…";
