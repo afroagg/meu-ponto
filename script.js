@@ -71,7 +71,6 @@ function mostrarLinhas() {
 
   const linhas = (previsao.p ? previsao.p.l : []).filter((linha) => linha.vs.length > 0);
 
-  // O ônibus que chega primeiro vem primeiro, dentro da linha e entre as linhas
   linhas.forEach((linha) => {
     linha.vs.sort((a, b) => minutosAte(previsao.hr, a.t) - minutosAte(previsao.hr, b.t));
   });
@@ -92,7 +91,7 @@ function mostrarLinhas() {
     listaLinhas.innerHTML += `
       <li>
         <span class="letreiro">${linha.c}</span>
-        <span class="destino">${linha.lt0}</span>
+        <span class="destino">${linha.lt0}<small>saindo de ${linha.lt1}</small></span>
         <span class="tempo">
           <strong class="${primeiro === 0 ? "chegando" : ""}">${textoMinutos(primeiro)}${acessivel}</strong>
           <small>${depois}</small>
@@ -131,7 +130,7 @@ async function escolherPonto(indice) {
   previsao = null;
   listaPontos.innerHTML = "";
   mensagem.textContent = "Carregando previsões…";
-  tituloPonto.textContent = pontoAtual.np;
+  tituloPonto.textContent = pontoAtual.np + " - " + pontoAtual.ed;
   filtro.hidden = false;
 
   await carregarPrevisao(true);
